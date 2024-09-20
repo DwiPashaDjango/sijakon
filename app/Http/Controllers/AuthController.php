@@ -37,8 +37,6 @@ class AuthController extends Controller
         }
 
         return $response;
-
-        return $response;
     }
 
     public function logout_post()
