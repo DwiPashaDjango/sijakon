@@ -68,7 +68,7 @@
                 $(`form#submit .error`).html(``)
 
                 this.api({
-                    url: `/login`,
+                    url: `/login/cek`,
                     method: `POST`,
                     data: formData,
                     success: e => {
