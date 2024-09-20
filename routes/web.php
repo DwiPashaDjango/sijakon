@@ -20,14 +20,14 @@ use Illuminate\Support\Facades\Route;
  */
 
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('home');
+// Route::get('/', function () {
+//     return view('welcome');
+// })->name('home');
 
 Route::group([
     "middleware" => ["auth_login"],
 ], function () {
-    Route::get("/auth", [AuthController::class, "login"])->name("auth.login");
+    Route::get("/", [AuthController::class, "login"])->name("auth.login");
     Route::post("/login", [AuthController::class, "login_post"]);
     Route::post("/logout", [AuthController::class, "logout_post"])->withoutMiddleware(["auth_login"]);
 });
