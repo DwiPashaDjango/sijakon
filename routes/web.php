@@ -28,7 +28,7 @@ Route::group([
     "middleware" => ["auth_login"],
 ], function () {
     Route::get("/login", [AuthController::class, "login"])->name("auth.login");
-    Route::post("/login", [AuthController::class, "login_post"])->name('auth.login.post');
+    Route::post("/login/cek", [AuthController::class, "login_post"])->name('auth.login.post');
     Route::post("/logout", [AuthController::class, "logout_post"])->withoutMiddleware(["auth_login"]);
 });
 
