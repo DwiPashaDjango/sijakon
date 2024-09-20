@@ -165,7 +165,7 @@ class CraftsmanController extends Controller
         $put = $request->except('picture');
 
         if ($request->hasFile('picture')) {
-            unlink(public_path($tukang->picture));
+            unlink(base_path($tukang->picture));
 
             $image = $request->file('picture');
             $imageName = rand() . '.' . $image->getClientOriginalExtension();
@@ -212,7 +212,7 @@ class CraftsmanController extends Controller
             ], 404);
         }
 
-        unlink(public_path($tukang->picture));
+        unlink(base_path($tukang->picture));
 
         $tukang->syncRoles([]);
 
