@@ -1,0 +1,55 @@
+[24-Feb-2024 14:13:14 Asia/Jakarta] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.1.0". You are running 7.0.33. in /home/agln8583/project/papi/vendor/composer/platform_check.php on line 24
+[24-Feb-2024 14:13:21 Asia/Jakarta] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.1.0". You are running 7.0.33. in /home/agln8583/project/papi/vendor/composer/platform_check.php on line 24
+[24-Feb-2024 14:13:21 Asia/Jakarta] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.1.0". You are running 7.0.33. in /home/agln8583/project/papi/vendor/composer/platform_check.php on line 24
+[24-Feb-2024 14:13:22 Asia/Jakarta] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.1.0". You are running 7.0.33. in /home/agln8583/project/papi/vendor/composer/platform_check.php on line 24
+[24-Feb-2024 14:13:22 Asia/Jakarta] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.1.0". You are running 7.0.33. in /home/agln8583/project/papi/vendor/composer/platform_check.php on line 24
+[16-Jul-2024 14:01:27 Asia/Jakarta] PHP Warning:  require(/home/agln8583/public_html/docu.aglarnusantara.com/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/agln8583/public_html/docu.aglarnusantara.com/index.php on line 34
+[16-Jul-2024 14:01:27 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Failed opening required '/home/agln8583/public_html/docu.aglarnusantara.com/../vendor/autoload.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/agln8583/public_html/docu.aglarnusantara.com/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/agln8583/public_html/docu.aglarnusantara.com/index.php on line 34
+[16-Jul-2024 14:01:44 Asia/Jakarta] PHP Warning:  require(/home/agln8583/public_html/docu.aglarnusantara.comvendor/autoload.php): Failed to open stream: No such file or directory in /home/agln8583/public_html/docu.aglarnusantara.com/index.php on line 34
+[16-Jul-2024 14:01:44 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Failed opening required '/home/agln8583/public_html/docu.aglarnusantara.comvendor/autoload.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/agln8583/public_html/docu.aglarnusantara.com/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/agln8583/public_html/docu.aglarnusantara.com/index.php on line 34
+[16-Jul-2024 14:01:44 Asia/Jakarta] PHP Warning:  require(/home/agln8583/public_html/docu.aglarnusantara.comvendor/autoload.php): Failed to open stream: No such file or directory in /home/agln8583/public_html/docu.aglarnusantara.com/index.php on line 34
+[16-Jul-2024 14:01:44 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Failed opening required '/home/agln8583/public_html/docu.aglarnusantara.comvendor/autoload.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/agln8583/public_html/docu.aglarnusantara.com/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/agln8583/public_html/docu.aglarnusantara.com/index.php on line 34
+[16-Jul-2024 14:01:44 Asia/Jakarta] PHP Warning:  require(/home/agln8583/public_html/docu.aglarnusantara.comvendor/autoload.php): Failed to open stream: No such file or directory in /home/agln8583/public_html/docu.aglarnusantara.com/index.php on line 34
+[16-Jul-2024 14:01:44 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Failed opening required '/home/agln8583/public_html/docu.aglarnusantara.comvendor/autoload.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/agln8583/public_html/docu.aglarnusantara.com/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/agln8583/public_html/docu.aglarnusantara.com/index.php on line 34
+[16-Jul-2024 14:01:46 Asia/Jakarta] PHP Warning:  require(/home/agln8583/public_html/docu.aglarnusantara.comvendor/autoload.php): Failed to open stream: No such file or directory in /home/agln8583/public_html/docu.aglarnusantara.com/index.php on line 34
+[16-Jul-2024 14:01:46 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Failed opening required '/home/agln8583/public_html/docu.aglarnusantara.comvendor/autoload.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/agln8583/public_html/docu.aglarnusantara.com/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/agln8583/public_html/docu.aglarnusantara.com/index.php on line 34
+[16-Jul-2024 14:02:03 Asia/Jakarta] PHP Warning:  require(/home/agln8583/public_html/docu.aglarnusantara.com./vendor/autoload.php): Failed to open stream: No such file or directory in /home/agln8583/public_html/docu.aglarnusantara.com/index.php on line 34
+[16-Jul-2024 14:02:03 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Failed opening required '/home/agln8583/public_html/docu.aglarnusantara.com./vendor/autoload.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/agln8583/public_html/docu.aglarnusantara.com/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/agln8583/public_html/docu.aglarnusantara.com/index.php on line 34
+[16-Jul-2024 14:02:04 Asia/Jakarta] PHP Warning:  require(/home/agln8583/public_html/docu.aglarnusantara.com./vendor/autoload.php): Failed to open stream: No such file or directory in /home/agln8583/public_html/docu.aglarnusantara.com/index.php on line 34
+[16-Jul-2024 14:02:04 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Failed opening required '/home/agln8583/public_html/docu.aglarnusantara.com./vendor/autoload.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/agln8583/public_html/docu.aglarnusantara.com/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/agln8583/public_html/docu.aglarnusantara.com/index.php on line 34
+[16-Jul-2024 14:02:11 Asia/Jakarta] PHP Warning:  require(/home/agln8583/public_html/docu.aglarnusantara.com./vendor/autoload.php): Failed to open stream: No such file or directory in /home/agln8583/public_html/docu.aglarnusantara.com/index.php on line 34
+[16-Jul-2024 14:02:11 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Failed opening required '/home/agln8583/public_html/docu.aglarnusantara.com./vendor/autoload.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/agln8583/public_html/docu.aglarnusantara.com/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/agln8583/public_html/docu.aglarnusantara.com/index.php on line 34
+[16-Jul-2024 14:02:15 Asia/Jakarta] PHP Warning:  require(/home/agln8583/public_html/docu.aglarnusantara.com./vendor/autoload.php): Failed to open stream: No such file or directory in /home/agln8583/public_html/docu.aglarnusantara.com/index.php on line 34
+[16-Jul-2024 14:02:15 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Failed opening required '/home/agln8583/public_html/docu.aglarnusantara.com./vendor/autoload.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/agln8583/public_html/docu.aglarnusantara.com/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/agln8583/public_html/docu.aglarnusantara.com/index.php on line 34
+[16-Jul-2024 14:03:48 Asia/Jakarta] PHP Warning:  require(/home/agln8583/public_html/docu.aglarnusantara.comvendor/autoload.php): Failed to open stream: No such file or directory in /home/agln8583/public_html/docu.aglarnusantara.com/index.php on line 34
+[16-Jul-2024 14:03:48 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Failed opening required '/home/agln8583/public_html/docu.aglarnusantara.comvendor/autoload.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/agln8583/public_html/docu.aglarnusantara.com/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/agln8583/public_html/docu.aglarnusantara.com/index.php on line 34
