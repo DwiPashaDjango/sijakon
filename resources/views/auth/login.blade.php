@@ -68,7 +68,7 @@
                 $(`form#submit .error`).html(``)
 
                 this.api({
-                    url: `/loginPost`,
+                    url: `{{route('auth.login.post')}}`,
                     method: `POST`,
                     data: formData,
                     success: e => {
