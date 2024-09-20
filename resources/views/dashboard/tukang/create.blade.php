@@ -125,7 +125,7 @@
             district() {
                 this.apiSelect2({
                     element: `form#submit [name=districts_id]`,
-                    url: `/api/districts`
+                    url: `/api/district/select2`
                 });
             }
 
