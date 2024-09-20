@@ -25,10 +25,18 @@ class AuthController extends Controller
 
         $data = json_decode($response->getContent(), true);
 
-        if (isset($data) && $data["status"] == true) {
-            Session::put("authorization", $data["data"]["token"]["plainTextToken"]);
-            Session::put("role", $data["data"]["user"]["roles"][0]["name"]);
+        if ($data && isset($data['status']) && $data['status'] === true) {
+            if (isset($data['data']['token']['plainTextToken']) && isset($data['data']['user']['roles'][0]['name'])) {
+                Session::put('authorization', $data['data']['token']['plainTextToken']);
+                Session::put('role', $data['data']['user']['roles'][0]['name']);
+            } else {
+                return response()->json(['error' => 'Token atau role tidak ditemukan'], 400);
+            }
+        } else {
+            return response()->json(['error' => 'Login gagal, periksa kredensial Anda'], 401);
         }
+
+        return $response;
 
         return $response;
     }
