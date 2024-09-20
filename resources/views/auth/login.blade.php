@@ -67,10 +67,8 @@
 
                 $(`form#submit .error`).html(``)
 
-                $(`form#submit input, form#submit button`).prop(`disabled`, true)
-
                 this.api({
-                    url: `/login-post`,
+                    url: `/login`,
                     method: `POST`,
                     data: formData,
                     success: e => {
@@ -84,8 +82,6 @@
                         } else {
                             window.location=`{{ route("dashboard") }}`
                         }
-
-                        $(`form#submit input, form#submit button`).prop(`disabled`, false)
                     },
                     error: err => {
                         let error = err.message
