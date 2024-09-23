@@ -7,6 +7,8 @@ use App\Http\Controllers\CraftsmanController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DistrictController;
 use App\Http\Controllers\EquipmentController;
+use App\Http\Controllers\Pages\BerandaController;
+use App\Http\Controllers\Pages\InfoTukangController;
 use App\Http\Controllers\SumberDataController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Artisan;
@@ -24,9 +26,8 @@ use Illuminate\Support\Facades\Route;
  */
 
 
-Route::get('/', function () {
-    return view('pages.home');
-})->name('home');
+Route::get('/', [BerandaController::class, 'index'])->name('home');
+Route::get('/info-tukang', [InfoTukangController::class, 'index'])->name('info.tukang');
 
 Route::group([
     "middleware" => ["auth_login"],

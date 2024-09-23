@@ -29,6 +29,9 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+
+Route::post("/info-tukang", [CraftsmanController::class, "getCraftsmanByDistrict"]);
+
 Route::group([
     "prefix" => "auth",
 ], function () {

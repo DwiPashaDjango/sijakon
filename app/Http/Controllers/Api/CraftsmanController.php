@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Models\District;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -220,6 +221,30 @@ class CraftsmanController extends Controller
             "data" => [
                 "id" => (int) $id
             ]
+        ]);
+    }
+
+    public function getCraftsmanByDistrict(Request $request)
+    {
+        $districts_id = $request->districts_id;
+
+        $tukang = User::with('bidang', 'district')->role('Tukang');
+
+        if (!empty($districts_id)) {
+            $tukangs = $tukang->where('districts_id', $districts_id)->orderBy('name', 'ASC')->get();
+        } else {
+            $tukangs = $tukang->orderBy('name', 'ASC')->get();
+        }
+
+        $tukangs = $tukangs->map(function ($tukang) {
+            $tukang->picture = !empty($tukang->picture) ? asset($tukang->picture) : null;
+            return $tukang;
+        });
+
+        return Response::json([
+            "status" => true,
+            "message" => "success.",
+            "data" => $tukangs
         ]);
     }
 }

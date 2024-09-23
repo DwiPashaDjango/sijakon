@@ -7,6 +7,7 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
 
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
@@ -115,6 +116,14 @@
     <script src="{{asset('pages')}}/lib/tempusdominus/js/moment.min.js"></script>
     <script src="{{asset('pages')}}/lib/tempusdominus/js/moment-timezone.min.js"></script>
     <script src="{{asset('pages')}}/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+    <script type="text/javascript">
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
+    </script>
+    @stack('js')
 
     <!-- Template Javascript -->
     <script src="{{asset('pages')}}/js/main.js"></script>
