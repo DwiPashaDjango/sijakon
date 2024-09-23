@@ -66,7 +66,7 @@
                         $.each(data.data, function(index, value) {
                             html += `<div class="col-lg-6 mt-3">
                                         <div class="row">
-                                            <div class="col-lg-4 col-sm-12" align="center">
+                                            <div class="col-lg-4 col-sm-12 mb-2">
                                                 <img src="${value.picture}" 
                                                     class="img-thumbnail" style="width: 200px; height: 200px;">
                                             </div>
