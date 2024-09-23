@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <title>{{ $title }} | {!! env("APP_NAME") !!}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta content="Aplikasi manajemen sparepart." name="description" />
+    <meta content="Sistem Informasi Jasa Tukang - SIJAKON." name="description" />
     <meta content="{{ env("APP_COPYRIGHT") }}" name="author" />
     <meta content="{{ env("APP_URL") }}" name="baseUrl">
     <meta content="Bearer {{ Session::get("authorization") }}" name="authorization">
