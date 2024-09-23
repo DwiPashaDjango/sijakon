@@ -66,11 +66,11 @@
                         $.each(data.data, function(index, value) {
                             html += `<div class="col-lg-6 mt-3">
                                         <div class="row">
-                                            <div class="col-4" align="center">
+                                            <div class="col-lg-4 col-sm-12" align="center">
                                                 <img src="${value.picture}" 
                                                     class="img-thumbnail" style="width: 200px; height: 200px;">
                                             </div>
-                                            <div class="col-8">
+                                            <div class="col-lg-8 col-sm-12">
                                                 <table border="0" style="width: 100%;">
                                                     <tr class="mt-2" style="line-height: 1.2rem; font-size: 1rem;">
                                                         <td style="width: 25%; vertical-align: top; text-align: left;">
