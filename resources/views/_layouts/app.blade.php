@@ -25,6 +25,8 @@
     <!-- custom Css-->
     <link href="{{ asset("") }}assets/css/custom.min.css" rel="stylesheet" type="text/css" />
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
     <!-- Sweet Alert css-->
     <link href="{{ asset("") }}assets/libs/sweetalert2/sweetalert2.min.css" rel="stylesheet" type="text/css" />
 

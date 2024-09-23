@@ -37,7 +37,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link menu-link {{ Request::routeIs('admin.pengguna*') || Request::routeIs('admin.tukang*') ? 'active' : '' }}" href="#master_data" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="master_data">
+                    <a class="nav-link menu-link {{ request()->is('dashboard/master-data*') ? 'active' : '' }}" href="#master_data" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="master_data">
                         <i class="ri-folder-open-line"></i> <span data-key="t-master_datas">Master Data</span>
                     </a>
                     <div class="collapse menu-dropdown" id="master_data">
@@ -59,13 +59,29 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="">
+                                <a class="nav-link {{ Request::routeIs('admin.district*') ? 'active' : '' }}" href="{{ route('admin.district') }}">
                                     <i class="ri-map-2-line"></i>
                                     <span data-key="t-users">Data Kecamatan</span>
                                 </a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link {{ Request::routeIs('admin.sumber-data') ? 'active' : '' }}" href="{{ route('admin.sumber-data') }}">
+                                    <i class="ri-file-3-line"></i>
+                                    <span data-key="t-users">Sumber Data</span>
+                                </a>
+                            </li>
                         </ul>
                     </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link menu-link {{ Request::routeIs('admin.badan-usaha') ? 'active' : '' }}" href="{{route('admin.badan-usaha')}}">
+                        <i class="ri-home-4-line"></i> <span data-key="t-dashboards">Data Badan Usaha</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link menu-link {{ Request::routeIs('admin.equipment') ? 'active' : '' }}" href="{{route('admin.equipment')}}">
+                        <i class="ri-stack-line"></i> <span data-key="t-dashboards">Data Peralatan</span>
+                    </a>
                 </li>
             </ul>
         </div>

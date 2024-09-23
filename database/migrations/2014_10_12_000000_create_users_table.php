@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
-            $table->string('picture')->default('default.png');
+            $table->string('picture')->nullable()->default(null);
             $table->foreignId('districts_id')->nullable();
             $table->foreignId('bidangs_id')->nullable();
             $table->string('name');

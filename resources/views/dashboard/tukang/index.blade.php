@@ -101,7 +101,7 @@
                                     let roles = localStorage.getItem('roles');
                                     return `
                                         <div class="btn-group">
-                                            <a href="{{url('dashboard/tukang/${e.id}/edit')}}" class="btn btn-primary btn-sm btn-icon"><i class="las la-edit"></i></a>
+                                            <a href="{{url('dashboard/master-data/tukang/${e.id}/edit')}}" class="btn btn-primary btn-sm btn-icon"><i class="las la-edit"></i></a>
                                             <button class="btn btn-danger btn-sm btn-icon destroy" data-bs-name="${ e.name }" data-bs-id="${ e.id }"><i class="las la-trash"></i></button>
                                         </div>
                                     `

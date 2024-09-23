@@ -17,8 +17,8 @@ return new class extends Migration
             $table->string('email');
             $table->string('nib');
             $table->string('pjbu');
-            $table->string('jenis');
-            $table->string('kualifikasi');
+            $table->text('jenis');
+            $table->text('kualifikasi');
             $table->string('telp');
             $table->string('alamat');
             $table->string('kode_sublifikasi');
