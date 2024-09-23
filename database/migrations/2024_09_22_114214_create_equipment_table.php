@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('sumbers_id');
             $table->foreignId('satuans_id');
-            $table->string('nama_material');
+            $table->string('nama');
             $table->string('jenis');
             $table->double('harga');
             $table->timestamps();
