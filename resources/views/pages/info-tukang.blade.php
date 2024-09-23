@@ -68,7 +68,7 @@
                                         <div class="row">
                                             <div class="col-lg-4 col-sm-12 mb-2">
                                                 <img src="${value.picture}" 
-                                                    class="img-thumbnail" style="width: 100%;>
+                                                    class="img-thumbnail" style="width: 200px; height: 200px;">
                                             </div>
                                             <div class="col-lg-8 col-sm-12">
                                                 <table border="0" style="width: 100%;">
