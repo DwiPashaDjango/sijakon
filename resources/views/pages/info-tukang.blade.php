@@ -115,11 +115,11 @@
                                                     </tr>
                                                     <tr class="mt-2" style="line-height: 1.2rem; font-size: 1rem;">
                                                         <td style="width: 25%; vertical-align: top; text-align: left;">
-                                                            <b>Alamat</b>
+                                                            <b>Email</b>
                                                         </td>
                                                         <td style="width: 10%; vertical-align: top; text-align: left;">:</td>
                                                         <td style="width: 65%;">
-                                                            ${value.alamat}
+                                                            ${value.email}
                                                         </td>
                                                     </tr>
                                                     <tr style="line-height: 1.2rem; font-size: 1rem;">
