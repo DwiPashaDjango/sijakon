@@ -2,15 +2,20 @@
     "title" => "Beranda"
 ])
 
+@push('css')
+    <style>
+    </style>
+@endpush    
+
 @section('content')
     <!-- Carousel Start -->
     <div class="container-fluid p-0">
-        <div class="owl-carousel header-carousel position-relative">
+        <div class="owl-carousel header-carousel">
             <div class="owl-carousel-item position-relative">
-                <img class="img-fluid" src="https://sijakon.batam.go.id/admin/api/banner/14/photo" alt="" style="height: 500px; object-fit: cover;">
+                <img class="img-fluid" src="https://sijakon.batam.go.id/admin/api/banner/14/photo" alt="" style="height: 500px;">
             </div>
             <div class="owl-carousel-item position-relative">
-                <img class="img-fluid" src="https://sijakon.batam.go.id/admin/api/banner/19/photo" alt="" style="height: 500px; object-fit: cover;">
+                <img class="img-fluid" src="https://sijakon.batam.go.id/admin/api/banner/19/photo" alt="" style="height: 500px;">
             </div>
         </div>
     </div>
@@ -59,7 +64,7 @@
                     </div>
                     <div class="d-flex align-items-center justify-content-between bg-light p-4">
                         <h5 class="text-truncate me-3 mb-0">Info Badan Usaha</h5>
-                        <a class="btn btn-square btn-outline-primary border-2 border-white flex-shrink-0" href=""><i class="fa fa-arrow-right"></i></a>
+                        <a class="btn btn-square btn-outline-primary border-2 border-white flex-shrink-0" href="{{route('info.badan.usaha')}}"><i class="fa fa-arrow-right"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6 service-item-top wow fadeInUp" data-wow-delay="0.5s">
@@ -68,7 +73,7 @@
                     </div>
                     <div class="d-flex align-items-center justify-content-between bg-light p-4">
                         <h5 class="text-truncate me-3 mb-0">Info Peralatan</h5>
-                        <a class="btn btn-square btn-outline-primary border-2 border-white flex-shrink-0" href=""><i class="fa fa-arrow-right"></i></a>
+                        <a class="btn btn-square btn-outline-primary border-2 border-white flex-shrink-0" href="{{route('info.peralatan')}}"><i class="fa fa-arrow-right"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6 service-item-top wow fadeInUp" data-wow-delay="0.5s">
@@ -101,29 +106,62 @@
             <div class="row g-5">
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
                     <h6 class="text-secondary text-uppercase">Tentang Kami</h6>
-                    <h1 class="mb-4">Kami adalah barisan orang introvert</h1>
-                    <p class="mb-4">Apapun kegiatan diluar sana, kami tidak akan minat, karena memang kami adalah orang orang introvert yang malas untuk bergaul dengan orang lain</p>
-                    <p class="fw-medium text-primary"><i class="fa fa-check text-success me-3"></i>Tukang Mantab</p>
-                    <p class="fw-medium text-primary"><i class="fa fa-check text-success me-3"></i>Jasa Apapun Bagus</p>
-                    <p class="fw-medium text-primary"><i class="fa fa-check text-success me-3"></i>Siap Melayani Sepenuh Hati </p>
-                    <div class="bg-primary d-flex align-items-center p-4 mt-5">
-                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white" style="width: 60px; height: 60px;">
-                            <i class="fa fa-phone-alt fa-2x text-primary"></i>
-                        </div>
-                        <div class="ms-3">
-                            <p class="fs-5 fw-medium mb-2 text-white">Keadaan darurat</p>
-                            <h3 class="m-0 text-secondary">+6281234567890</h3>
-                        </div>
-                    </div>
+                    <h1 class="mb-2">AZRIL APRIANSYAH, ST, MT</h1>
+                    <h4 class="mb-5">Kepala Dinas Cipta Karya dan Tata Ruang Kota Batam</h4>
+                    <p class="mb-4" style="word-break: break-all">
+                        " 
+                        Kehadiran SIJAKON akan menjawab keinginan masyarakat terhadap kebutuhan akan Jasa Konstruksi yang tersertifikasi dan terpercaya <br>
+                        Hadirnya SIJAKON di tengah masyarakat kini yang menghadapi ketidakpastian ditengah situasi pandemi ini diharapkan dapat menjadikan solusi jitu bagi permasalahan-permasalahan yang ada khususnya terkait konstruksi bangunan, baik itu skala perumahan maupun bangunan besar. <br>
+                        Sulitnya mencari tukang yang dapat dipercaya dan bekerja sesuai dengan tanggung jawabnya menjadi latar belakang permasalahan yang perlu dicarikan solusinya. Untuk menjawab itu semua, maka kami Dinas Cipta Karya dan Tata Ruang Pemerintah Kota Batam yang berlokasi di sekupang Kota Batam ini menghadirkan SIJAKON tentunya untuk mengatasi persoalan-persoalan yang ada.
+                        "
+                    </p>
                 </div>
                 <div class="col-lg-6 pt-4" style="min-height: 500px;">
                     <div class="position-relative h-100 wow fadeInUp" data-wow-delay="0.5s">
-                        <img class="position-absolute img-fluid w-100 h-100" src="{{asset('pages')}}/img/about-1.jpg" alt="">
-                        {{-- <img class="position-absolute start-0 bottom-0 img-fluid bg-white pt-2 pe-2 w-50 h-50" src="{{asset('pages')}}/img/about-2.jpg" style="object-fit: cover;" alt=""> --}}
+                        <img class="position-absolute img-fluid" style="width: 100%; height: 500px" src="https://sijakon.batam.go.id/admin/api/kadis/9/photo" alt="">
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- About End -->
+
+    <!-- About Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <h1 class="mb-2">POPULASI TENAGA KERJA KONSTRUKSI</h1>
+            <h4 class="mb-4">Data pertumbuhan Tenaga Kerja Konstruksi di Kota Batam</h4>
+            <div class="my-3">
+                 <canvas id="myChart"></canvas>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
 @endsection
+
+@push('js')
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const ctx = document.getElementById('myChart');
+
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+            labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                datasets: [{
+                    label: '# of Votes',
+                    data: [12, 19, 3, 5, 2, 3],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                    beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+
+@endpush

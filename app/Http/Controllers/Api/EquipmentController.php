@@ -25,7 +25,7 @@ class EquipmentController extends Controller
         $bidang = Equipment::with('sumber_data', 'satuan');
 
         if ($search) {
-            $bidang->where("nama_material", "LIKE", "%$search%")
+            $bidang->where("nama", "LIKE", "%$search%")
                 ->orWhereHas('sumber_data', function ($sumber) use ($search) {
                     $sumber->where('name', 'like', "%$search%");
                 });
@@ -154,6 +154,41 @@ class EquipmentController extends Controller
             "status" => true,
             "message" => "success.",
             "data" => $id
+        ], 200);
+    }
+
+    public function getAllEquipment(Request $request)
+    {
+        $sumbers_id = $request->sumbers_id;
+        $search = $request->search;
+
+        $equipment = Equipment::with('sumber_data', 'satuan');
+
+        if (!empty($sumbers_id)) {
+            $equipments = $equipment->where('sumbers_id', $sumbers_id)->orderBy('id', 'DESC')->get();
+        }
+
+        if (!empty($search)) {
+            $equipments = $equipment->where("nama", "LIKE", "%$search%")
+                ->orWhereHas('sumber_data', function ($sumber) use ($search) {
+                    $sumber->where('name', 'like', "%$search%");
+                })
+                ->orWhereHas('satuan', function ($satuan) use ($search) {
+                    $satuan->where('name', 'like', "%$search%");
+                });
+        }
+
+        $equipments = $equipment->orderBy('id', 'DESC')->get();
+
+        $equipments = $equipments->map(function ($equipment) {
+            $equipment->harga = number_format($equipment->harga, 2);
+            return $equipment;
+        });
+
+        return Response::json([
+            "status" => true,
+            "message" => "success.",
+            "data" => $equipments
         ], 200);
     }
 }

@@ -106,7 +106,7 @@
                                                     </tr>
                                                     <tr class="mt-2" style="line-height: 1.2rem; font-size: 1rem;">
                                                         <td style="width: 25%; vertical-align: top; text-align: left;">
-                                                            <b>No Telephone</b>
+                                                            <b>No Hp</b>
                                                         </td>
                                                         <td style="width: 10%; vertical-align: top; text-align: left;">:</td>
                                                         <td style="width: 65%;">

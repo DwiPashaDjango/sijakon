@@ -163,4 +163,30 @@ class BadanUsahaController extends Controller
             ]
         ]);
     }
+
+    public function getAllBadanUsaha(Request $request)
+    {
+        $search = $request->search;
+
+        $badanUsaha = BadanUsaha::query();
+
+        if (!empty($search)) {
+            $badanUsahas = $badanUsaha->where("name", "LIKE", "%$search%")
+                ->orWhere('alamat', 'like', "%$search%")
+                ->orWhere('telp', 'like', "%$search%")
+                ->orWhere('nib', 'like', "%$search%")
+                ->orWhere('pjbu', 'like', "%$search%")
+                ->orWhere('jenis', 'like', "%$search%")
+                ->orderBy('id', 'DESC')
+                ->get();
+        } else {
+            $badanUsahas = $badanUsaha->orderBy('id', 'DESC')->get();
+        }
+
+        return Response::json([
+            "status" => true,
+            "message" => "success.",
+            "data" => $badanUsahas
+        ]);
+    }
 }

@@ -1,4 +1,5 @@
 /********** Template CSS **********/
+
 :root {
     --primary: #1E60AA;
     --secondary: #FF4917;
@@ -20,6 +21,7 @@
 
 
 /*** Spinner ***/
+
 #spinner {
     opacity: 0;
     visibility: hidden;
@@ -35,6 +37,7 @@
 
 
 /*** Button ***/
+
 .btn {
     font-weight: 600;
     transition: .5s;
@@ -72,6 +75,7 @@
 
 
 /*** Navbar ***/
+
 .top-bar {
     height: 75px;
     padding: 0 4rem;
@@ -118,12 +122,10 @@
     .nav-bar {
         padding: 0;
     }
-
-    .navbar-light .navbar-nav .nav-link  {
+    .navbar-light .navbar-nav .nav-link {
         margin-right: 0;
         padding: 10px 0;
     }
-
     .navbar-light .navbar-nav {
         margin-top: 1rem;
         padding-top: 1rem;
@@ -141,7 +143,6 @@
         visibility: hidden;
         transition: .5s;
     }
-
     .navbar .nav-item:hover .dropdown-menu {
         top: 100%;
         visibility: visible;
@@ -152,6 +153,7 @@
 
 
 /*** Header ***/
+
 .header-carousel .container,
 .page-header .container {
     position: relative;
@@ -183,20 +185,17 @@
         position: relative;
         min-height: 500px;
     }
-    
     .header-carousel .owl-carousel-item img {
         position: absolute;
         width: 100%;
-        height: 100%;
+        height: 500px;
         object-fit: cover;
     }
-
     .header-carousel .owl-carousel-item h5,
     .header-carousel .owl-carousel-item p {
         font-size: 14px !important;
         font-weight: 400 !important;
     }
-
     .header-carousel .owl-carousel-item h1 {
         font-size: 30px;
         font-weight: 600;
@@ -239,12 +238,13 @@
     background-size: cover;
 }
 
-.breadcrumb-item + .breadcrumb-item::before {
+.breadcrumb-item+.breadcrumb-item::before {
     color: var(--light);
 }
 
 
 /*** Facts ***/
+
 .fact {
     background: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)), url(../img/bg.jpg) center center no-repeat;
     background-size: cover;
@@ -252,6 +252,7 @@
 
 
 /*** Service ***/
+
 .service-item-top img {
     transition: .5s;
 }
@@ -285,6 +286,7 @@
 
 
 /*** Booking ***/
+
 .video {
     position: relative;
     padding: 8rem 0 12rem 0;
@@ -363,7 +365,6 @@
         transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
         opacity: 1;
     }
-
     100% {
         transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
         opacity: 0;
@@ -427,6 +428,7 @@
 
 
 /*** Team ***/
+
 .team-item img {
     transition: .5s;
 }
@@ -471,6 +473,7 @@
 
 
 /*** Testimonial ***/
+
 .testimonial-carousel .owl-item .testimonial-text,
 .testimonial-carousel .owl-item.center .testimonial-text * {
     position: relative;
@@ -496,7 +499,6 @@
     border: 15px solid;
     border-color: var(--light) transparent transparent transparent;
     transition: .5s;
-
 }
 
 .testimonial-carousel .owl-item.center .testimonial-text::after {
@@ -534,6 +536,7 @@
 
 
 /*** Footer ***/
+
 .footer .btn.btn-social {
     margin-right: 5px;
     width: 35px;
