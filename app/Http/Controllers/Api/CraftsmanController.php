@@ -79,6 +79,9 @@ class CraftsmanController extends Controller
             "bidangs_id" => "required|max:255",
             "districts_id" => "required|max:255",
             "sertifikat" => "required|max:255",
+            "nik" => "required|min:16",
+            "tmp_lahir" => "required|max:255",
+            "alamat" => "required|max:255",
             "picture" => "required|max:255|mimes:png,jpg,jpeg",
             "password" => "required|max:50"
         ]);
@@ -116,6 +119,7 @@ class CraftsmanController extends Controller
     public function show(string $id)
     {
         $tukang = User::where("id", $id)->with("bidang", "district", "roles")->first();
+        $tukang->picture = asset($tukang->picture);
 
         if ($tukang  == null) {
             return Response::json([
@@ -137,13 +141,16 @@ class CraftsmanController extends Controller
     public function update(Request $request, string $id)
     {
         $validation = Validator::make($request->all(), [
-            "username" => "required|max:255|unique:users,username," . $id,
+            "username" => "required|max:255|unique:users,username",
             "name" => "required|max:255",
-            "email" => "required|max:255|unique:users,email," . $id,
+            "email" => "required|max:255|unique:users,email",
             "telp" => "required|max:255",
             "bidangs_id" => "required|max:255",
             "districts_id" => "required|max:255",
             "sertifikat" => "required|max:255",
+            "nik" => "required|min:16",
+            "tmp_lahir" => "required|max:255",
+            "alamat" => "required|max:255",
             "picture" => "max:255|mimes:png,jpg,jpeg",
         ]);
 

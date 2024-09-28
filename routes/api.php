@@ -7,9 +7,12 @@ use App\Http\Controllers\Api\CountryController;
 use App\Http\Controllers\Api\CraftsmanController;
 use App\Http\Controllers\Api\DashboardController;
 use App\Http\Controllers\Api\EquipmentController;
+use App\Http\Controllers\Api\MaterialController;
+use App\Http\Controllers\Api\ProyekController;
 use App\Http\Controllers\Api\RoleController;
 use App\Http\Controllers\Api\SatuanController;
 use App\Http\Controllers\Api\SumberDataController;
+use App\Http\Controllers\Api\SumberProyekController;
 use App\Http\Controllers\Api\UserController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -33,6 +36,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::post("/info-tukang", [CraftsmanController::class, "getCraftsmanByDistrict"]);
 Route::post("/info-badan-usaha", [BadanUsahaController::class, "getAllBadanUsaha"]);
 Route::post("/info-peralatan", [EquipmentController::class, "getAllEquipment"]);
+Route::post("/info-material", [MaterialController::class, "getAllMaterial"]);
 
 Route::group([
     "prefix" => "auth",
@@ -113,6 +117,32 @@ Route::group([
         Route::get("/{id}/show", [EquipmentController::class, "show"]);
         Route::put("/{id}/update", [EquipmentController::class, "update"]);
         Route::delete("/{id}/destroy", [EquipmentController::class, "destroy"]);
+    });
+
+    Route::group([
+        "prefix" => "material",
+    ], function () {
+        Route::get("/", [MaterialController::class, "index"]);
+        Route::post("/store", [MaterialController::class, "store"]);
+        Route::get("/{id}/show", [MaterialController::class, "show"]);
+        Route::put("/{id}/update", [MaterialController::class, "update"]);
+        Route::delete("/{id}/destroy", [MaterialController::class, "destroy"]);
+    });
+
+    Route::group([
+        "prefix" => "sumber-proyek",
+    ], function () {
+        Route::get("/select2", [SumberProyekController::class, "select2"]);
+    });
+
+    Route::group([
+        "prefix" => "proyek",
+    ], function () {
+        Route::get("/", [ProyekController::class, "index"]);
+        Route::post("/store", [ProyekController::class, "store"]);
+        Route::get("/{id}/show", [ProyekController::class, "show"]);
+        Route::put("/{id}/update", [ProyekController::class, "update"]);
+        Route::delete("/{id}/destroy", [ProyekController::class, "destroy"]);
     });
 });
 

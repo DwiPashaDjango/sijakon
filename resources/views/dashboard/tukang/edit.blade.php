@@ -34,6 +34,22 @@
                         <div class="row">
                             <div class="col-lg-6 mb-3">
                                 <div class="form-group">
+                                    <label for="nik" class="form-label">NIK</label>
+                                    <input type="text" name="nik" id="nik" class="form-control" autocomplete="off" placeholder="No Induk Kewarganegaraan">
+                                    <small class="text-danger error" id="error-nik"></small>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 mb-3">
+                                <div class="form-group">
+                                    <label for="tmp_lahir" class="form-label">Tempat Lahir</label>
+                                    <input type="text" name="tmp_lahir" id="tmp_lahir" class="form-control" autocomplete="off" placeholder="Tempat Lahir">
+                                    <small class="text-danger error" id="error-tmp_lahir"></small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 mb-3">
+                                <div class="form-group">
                                     <label for="email" class="form-label">Email</label>
                                     <input type="email" name="email" id="email" class="form-control" autocomplete="off" placeholder="Email">
                                     <small class="text-danger error" id="error-email"></small>
@@ -80,6 +96,15 @@
                                         <option value="">- Pilih -</option>
                                     </select>
                                     <small class="text-danger error" id="error-districts_id"></small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="form-group mb-3">
+                                    <label for="alamat" class="form-label">Alamat</label>
+                                    <textarea name="alamat" id="alamat" cols="30" rows="2" class="form-control" placeholder="Alamat"></textarea>
+                                    <small class="text-danger error" id="error-alamat"></small>
                                 </div>
                             </div>
                         </div>
@@ -175,6 +200,9 @@
                         $(`form#submit [name=email]`).val(data.email)
                         $(`form#submit [name=telp]`).val(data.telp)
                         $(`form#submit [name=sertifikat]`).val(data.sertifikat)
+                        $(`form#submit [name=nik]`).val(data.nik)
+                        $(`form#submit [name=tmp_lahir]`).val(data.tmp_lahir)
+                        $(`form#submit [name=alamat]`).val(data.alamat)
                         $(`form#submit [name='bidangs_id']`).html(`<option value="${ data.bidang.id }" selected>${ data.bidang.name }</option>`);
                         $(`form#submit [name='districts_id']`).html(`<option value="${ data.district.id }" selected>${ data.district.name }</option>`);
                     },

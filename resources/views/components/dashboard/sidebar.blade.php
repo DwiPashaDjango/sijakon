@@ -83,6 +83,16 @@
                         <i class="ri-stack-line"></i> <span data-key="t-dashboards">Data Peralatan</span>
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link menu-link {{ Request::routeIs('admin.material') ? 'active' : '' }}" href="{{route('admin.material')}}">
+                        <i class="ri-stack-line"></i> <span data-key="t-dashboards">Data Material</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link menu-link {{ Request::routeIs('admin.proyek') ? 'active' : '' }}" href="{{route('admin.proyek')}}">
+                        <i class="ri-stack-line"></i> <span data-key="t-dashboards">Data Proyek</span>
+                    </a>
+                </li>
             </ul>
         </div>
         <!-- Sidebar -->

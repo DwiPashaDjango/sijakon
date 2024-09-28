@@ -23,7 +23,7 @@ class UserController extends Controller
 
         $search = $request->search;
 
-        $users = User::with('district', 'roles')->whereNotNull("id")->role('User');
+        $users = User::with('district', 'roles')->select('id', 'username', 'name', 'email', 'telp', 'alamat', 'districts_id', 'picture')->whereNotNull("id")->role('User');
 
         if ($search) {
             $users->where("name", "LIKE", "%$search%")
@@ -88,7 +88,7 @@ class UserController extends Controller
      */
     public function show(string $id)
     {
-        $user = User::where("id", $id)->with("district", "roles")->first();
+        $user = User::where("id", $id)->with("district", "roles")->select('id', 'username', 'name', 'email', 'telp', 'alamat', 'districts_id', 'picture')->first();
 
         if ($user == null) {
             return Response::json([

@@ -17,6 +17,8 @@
                                 <tr>
                                     <th>Foto</th>
                                     <th>Nama Lengkap</th>
+                                    <th>NIK</th>
+                                    <th>Tempat Lahir</th>
                                     <th>Username</th>
                                     <th>Email</th>
                                     <th>No Telephone</th>
@@ -66,6 +68,12 @@
                         },
                         {
                             data: `name`
+                        },
+                        {
+                            data: `nik`
+                        },
+                        {
+                            data: `tmp_lahir`
                         },
                         {
                             data: `username`

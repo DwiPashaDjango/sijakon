@@ -7,10 +7,13 @@ use App\Http\Controllers\CraftsmanController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DistrictController;
 use App\Http\Controllers\EquipmentController;
+use App\Http\Controllers\MaterialController;
 use App\Http\Controllers\Pages\BerandaController;
 use App\Http\Controllers\Pages\InfoBadanUsahaController;
 use App\Http\Controllers\Pages\InfoEquipmentController;
 use App\Http\Controllers\Pages\InfoTukangController;
+use App\Http\Controllers\Pages\InfoMaterialController;
+use App\Http\Controllers\ProyekController;
 use App\Http\Controllers\SumberDataController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Artisan;
@@ -32,6 +35,7 @@ Route::get('/', [BerandaController::class, 'index'])->name('home');
 Route::get('/info-tukang', [InfoTukangController::class, 'index'])->name('info.tukang');
 Route::get('/info-badan-usaha', [InfoBadanUsahaController::class, 'index'])->name('info.badan.usaha');
 Route::get('/info-peralatan', [InfoEquipmentController::class, 'index'])->name('info.peralatan');
+Route::get('/info-material', [InfoMaterialController::class, 'index'])->name('info.material');
 
 Route::group([
     "middleware" => ["auth_login"],
@@ -79,6 +83,14 @@ Route::group([
 
     Route::prefix('equipment')->group(function () {
         Route::get('/', [EquipmentController::class, 'index'])->name('admin.equipment');
+    });
+
+    Route::prefix('materials')->group(function () {
+        Route::get('/', [MaterialController::class, 'index'])->name('admin.material');
+    });
+
+    Route::prefix('proyeks')->group(function () {
+        Route::get('/', [ProyekController::class, 'index'])->name('admin.proyek');
     });
 });
 
