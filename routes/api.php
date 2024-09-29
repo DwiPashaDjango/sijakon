@@ -155,3 +155,6 @@ Route::prefix('district')->group(function () {
     Route::put("/{id}/update", [CountryController::class, "update"]);
     Route::delete("/{id}/destroy", [CountryController::class, "destroy"]);
 });
+
+
+Route::get('/getDistrictApi', [CountryController::class, 'getDistrictApi']);

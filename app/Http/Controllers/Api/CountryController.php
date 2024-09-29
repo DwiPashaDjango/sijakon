@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Models\District;
+use GuzzleHttp\Client;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Response;
 use Illuminate\Support\Facades\Validator;
@@ -163,5 +164,21 @@ class CountryController extends Controller
             "message" => "success.",
             "data" => $id
         ], 200);
+    }
+
+    public function getDistrictApi() {
+        $client = new Client();
+
+        $response = $client->get('https://www.emsifa.com/api-wilayah-indonesia/api/districts/2171.json');
+        $districts = json_decode($response->getBody(), true);
+
+        foreach ($districts as $districtData) {
+            District::updateOrCreate(
+                ['id' => $districtData['id']],
+                ['name' => $districtData['name']]
+            );
+        }
+
+        return "Data distrik berhasil disimpan!";
     }
 }
