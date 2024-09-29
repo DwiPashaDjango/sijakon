@@ -27,17 +27,17 @@
             <div class="row g-4">
                 <div class="col-md-6 col-lg-4 text-center wow fadeIn" data-wow-delay="0.7s">
                     <i class="fa fa-wrench fa-2x text-white mb-3"></i>
-                    <h2 class="text-white mb-2" data-toggle="counter-up">1234</h2>
+                    <h2 class="text-white mb-2" data-toggle="counter-up">{{$countTukang}}</h2>
                     <p class="text-white mb-0">Jumlah Tenaga Kerja</p>
                 </div>
                 <div class="col-md-6 col-lg-4 text-center wow fadeIn" data-wow-delay="0.5s">
                     <i class="fa fa-users fa-2x text-white mb-3"></i>
-                    <h2 class="text-white mb-2" data-toggle="counter-up">1234</h2>
+                    <h2 class="text-white mb-2" data-toggle="counter-up">{{$countBadanUsaha}}</h2>
                     <p class="text-white mb-0">Jumlah Badan Usaha</p>
                 </div>
                 <div class="col-md-6 col-lg-4 text-center wow fadeIn" data-wow-delay="0.3s">
                     <i class="fa fa-users-cog fa-2x text-white mb-3"></i>
-                    <h2 class="text-white mb-2" data-toggle="counter-up">1234</h2>
+                    <h2 class="text-white mb-2" data-toggle="counter-up">{{$countProyek}}</h2>
                     <p class="text-white mb-0">Jumlah Proyek</p>
                 </div>
             </div>

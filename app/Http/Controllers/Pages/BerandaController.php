@@ -3,7 +3,10 @@
 namespace App\Http\Controllers\Pages;
 
 use App\Http\Controllers\Controller;
+use App\Models\BadanUsaha;
 use App\Models\District;
+use App\Models\Proyek;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class BerandaController extends Controller
@@ -16,6 +19,10 @@ class BerandaController extends Controller
             });
         }])->get();
 
-        return view("pages.home", compact('districts'));
+        $countTukang = User::role('Tukang')->count();
+        $countBadanUsaha = BadanUsaha::count();
+        $countProyek = Proyek::count();
+
+        return view("pages.home", compact('districts', 'countTukang', 'countBadanUsaha', 'countProyek'));
     }
 }
