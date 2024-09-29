@@ -13,6 +13,7 @@ use App\Http\Controllers\Pages\InfoBadanUsahaController;
 use App\Http\Controllers\Pages\InfoEquipmentController;
 use App\Http\Controllers\Pages\InfoTukangController;
 use App\Http\Controllers\Pages\InfoMaterialController;
+use App\Http\Controllers\Pages\InfoProyekController;
 use App\Http\Controllers\ProyekController;
 use App\Http\Controllers\SumberDataController;
 use App\Http\Controllers\UserController;
@@ -36,6 +37,7 @@ Route::get('/info-tukang', [InfoTukangController::class, 'index'])->name('info.t
 Route::get('/info-badan-usaha', [InfoBadanUsahaController::class, 'index'])->name('info.badan.usaha');
 Route::get('/info-peralatan', [InfoEquipmentController::class, 'index'])->name('info.peralatan');
 Route::get('/info-material', [InfoMaterialController::class, 'index'])->name('info.material');
+Route::get('/info-proyek', [InfoProyekController::class, 'index'])->name('info.proyek');
 
 Route::group([
     "middleware" => ["auth_login"],

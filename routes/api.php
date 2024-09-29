@@ -37,6 +37,7 @@ Route::post("/info-tukang", [CraftsmanController::class, "getCraftsmanByDistrict
 Route::post("/info-badan-usaha", [BadanUsahaController::class, "getAllBadanUsaha"]);
 Route::post("/info-peralatan", [EquipmentController::class, "getAllEquipment"]);
 Route::post("/info-material", [MaterialController::class, "getAllMaterial"]);
+Route::post("/info-proyek", [ProyekController::class, "getAllProyek"]);
 
 Route::group([
     "prefix" => "auth",

@@ -91,7 +91,7 @@
                     </div>
                     <div class="d-flex align-items-center justify-content-between bg-light p-4">
                         <h5 class="text-truncate me-3 mb-0">Info Proyek</h5>
-                        <a class="btn btn-square btn-outline-primary border-2 border-white flex-shrink-0" href=""><i class="fa fa-arrow-right"></i></a>
+                        <a class="btn btn-square btn-outline-primary border-2 border-white flex-shrink-0" href="{{route('info.proyek')}}"><i class="fa fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>

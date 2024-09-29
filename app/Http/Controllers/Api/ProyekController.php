@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Models\Proyek;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Response;
 use Illuminate\Support\Facades\Validator;
@@ -155,5 +156,48 @@ class ProyekController extends Controller
             "message" => "success.",
             "data" => (int) $id
         ], 200);
+    }
+
+    public function getAllProyek(Request $request)
+    {
+        $sumbers_id = $request->sumbers_id;
+        $search = $request->search;
+        $years = $request->years;
+
+        $proyek = Proyek::with('sumber_proyek', 'district');
+
+        $proyek = $proyek->when(!empty($sumbers_id), function ($query) use ($sumbers_id) {
+            return $query->where('sumbers_id', $sumbers_id);
+        });
+
+        $proyek = $proyek->when(!empty($search), function ($query) use ($search) {
+            return $query->where("nama", "LIKE", "%$search%")
+            ->orWhereHas('sumber_proyek', function ($sumber) use ($search) {
+                $sumber->where('name', 'like', "%$search%");
+            })
+                ->orWhereHas('district', function ($district) use ($search) {
+                    $district->where('name', 'like', "%$search%");
+                });
+        });
+
+        $proyek = $proyek->when(!empty($years), function ($query) use ($years) {
+            return $query->whereYear('tgl_mulai', $years);
+        });
+
+        $proyeks = $proyek->orderBy('id', 'DESC')->get();
+
+        $proyeks = $proyeks->map(function ($proyek) {
+            $proyek->tgl_mulai = Carbon::parse($proyek->tgl_mulai)->translatedFormat('d M Y');
+            $proyek->tgl_selesai = Carbon::parse($proyek->tgl_selesai)->translatedFormat('d M Y');
+            return $proyek;
+        });
+
+        return Response::json([
+            "status" => true,
+            "message" => "success.",
+            "data" => $proyeks,
+            "count_proyek" => count($proyeks)
+        ], 200);
+
     }
 }
