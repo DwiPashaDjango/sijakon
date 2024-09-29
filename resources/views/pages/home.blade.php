@@ -142,22 +142,26 @@
 @push('js')
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
-        const ctx = document.getElementById('myChart');
+        var districtNames = {!! json_encode($districts->pluck('name')) !!};
+        var tukangCounts = {!! json_encode($districts->pluck('tukang_count')) !!};
 
-        new Chart(ctx, {
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var districtTukangChart = new Chart(ctx, {
             type: 'bar',
             data: {
-            labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                labels: districtNames,
                 datasets: [{
-                    label: '# of Votes',
-                    data: [12, 19, 3, 5, 2, 3],
+                    label: 'Jumlah Tukang per Kecamatan',
+                    data: tukangCounts,
+                    backgroundColor: 'rgba(54, 162, 235, 0.6)',
+                    borderColor: 'rgba(54, 162, 235, 1)',
                     borderWidth: 1
                 }]
             },
             options: {
                 scales: {
                     y: {
-                    beginAtZero: true
+                        beginAtZero: true
                     }
                 }
             }

@@ -10,4 +10,8 @@ class District extends Model
     use HasFactory;
     protected $table = 'districts';
     protected $fillable = ['name'];
+
+    public function user() {
+        return $this->hasMany(User::class, 'districts_id', 'id');
+    }
 }
