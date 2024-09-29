@@ -74,10 +74,10 @@
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-light mb-4">Menu</h4>
-                    <a class="btn btn-link" href="">Beranda</a>
-                    <a class="btn btn-link" href="">Tentang Kami</a>
-                    <a class="btn btn-link" href="">FAQ</a>
-                    <a class="btn btn-link" href="">User Manual</a>
+                    <a class="btn btn-link" href="{{route('home')}}">Beranda</a>
+                    <a class="btn btn-link" href="{{route('tentang.kami')}}">Tentang Kami</a>
+                    <a class="btn btn-link" href="{{route('faq')}}">FAQ</a>
+                    <a class="btn btn-link" href="{{route('user.guide')}}">User Manual</a>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-light mb-4">Syarat & Ketentuan</h4>
