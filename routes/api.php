@@ -157,4 +157,4 @@ Route::prefix('district')->group(function () {
 });
 
 
-Route::get('/getDistrictApi', [CountryController::class, 'getDistrictApi']);
+// Route::get('/getDistrictApi', [CountryController::class, 'getDistrictApi']);

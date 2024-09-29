@@ -9,11 +9,14 @@ use App\Http\Controllers\DistrictController;
 use App\Http\Controllers\EquipmentController;
 use App\Http\Controllers\MaterialController;
 use App\Http\Controllers\Pages\BerandaController;
+use App\Http\Controllers\Pages\FaqController;
 use App\Http\Controllers\Pages\InfoBadanUsahaController;
 use App\Http\Controllers\Pages\InfoEquipmentController;
 use App\Http\Controllers\Pages\InfoTukangController;
 use App\Http\Controllers\Pages\InfoMaterialController;
 use App\Http\Controllers\Pages\InfoProyekController;
+use App\Http\Controllers\Pages\TentangKamiController;
+use App\Http\Controllers\Pages\UserGuideController;
 use App\Http\Controllers\ProyekController;
 use App\Http\Controllers\SumberDataController;
 use App\Http\Controllers\UserController;
@@ -38,6 +41,9 @@ Route::get('/info-badan-usaha', [InfoBadanUsahaController::class, 'index'])->nam
 Route::get('/info-peralatan', [InfoEquipmentController::class, 'index'])->name('info.peralatan');
 Route::get('/info-material', [InfoMaterialController::class, 'index'])->name('info.material');
 Route::get('/info-proyek', [InfoProyekController::class, 'index'])->name('info.proyek');
+Route::get('/tentang-kami', [TentangKamiController::class, 'index'])->name('tentang.kami');
+Route::get('/faq', [FaqController::class, 'index'])->name('faq');
+Route::get('/user-guide', [UserGuideController::class, 'index'])->name('user.guide');
 
 Route::group([
     "middleware" => ["auth_login"],

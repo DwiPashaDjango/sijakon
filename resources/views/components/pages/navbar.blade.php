@@ -9,9 +9,9 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav me-auto">
                 <a href="{{route('home')}}" class="nav-item nav-link {{Request::routeIs('home') ? 'active' : ''}}">Beranda</a>
-                <a href="" class="nav-item nav-link">Tentang Kami</a>
-                <a href="" class="nav-item nav-link">FAQ</a>
-                <a href="" class="nav-item nav-link">User Manual</a>
+                <a href="{{route('tentang.kami')}}" class="nav-item nav-link {{Request::routeIs('tentang.kami') ? 'active' : ''}}">Tentang Kami</a>
+                <a href="{{route('faq')}}" class="nav-item nav-link {{Request::routeIs('faq') ? 'active' : ''}}">FAQ</a>
+                <a href="{{route('user.guide')}}" class="nav-item nav-link {{Request::routeIs('user.guide') ? 'active' : ''}}">User Manual</a>
             </div>
             <div class="mt-4 mt-lg-0 me-lg-n4 py-3 px-4 bg-primary d-flex align-items-center">
                 <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white" style="width: 45px; height: 45px;">

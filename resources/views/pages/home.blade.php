@@ -103,22 +103,22 @@
     <!-- About Start -->
     <div class="container-xxl py-5">
         <div class="container">
-            <div class="row g-5">
+           <div class="row g-5">
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
                     <h6 class="text-secondary text-uppercase">Tentang Kami</h6>
                     <h1 class="mb-2">AZRIL APRIANSYAH, ST, MT</h1>
                     <h4 class="mb-5">Kepala Dinas Cipta Karya dan Tata Ruang Kota Batam</h4>
-                    <p class="mb-4" style="word-break: break-all">
+                    <p class="mb-4">
                         " 
-                        Kehadiran SIJAKON akan menjawab keinginan masyarakat terhadap kebutuhan akan Jasa Konstruksi yang tersertifikasi dan terpercaya <br>
-                        Hadirnya SIJAKON di tengah masyarakat kini yang menghadapi ketidakpastian ditengah situasi pandemi ini diharapkan dapat menjadikan solusi jitu bagi permasalahan-permasalahan yang ada khususnya terkait konstruksi bangunan, baik itu skala perumahan maupun bangunan besar. <br>
+                        Kehadiran SIJAKON akan menjawab keinginan masyarakat terhadap kebutuhan akan Jasa Konstruksi yang tersertifikasi dan terpercaya <br> <br>
+                        Hadirnya SIJAKON di tengah masyarakat kini yang menghadapi ketidakpastian ditengah situasi pandemi ini diharapkan dapat menjadikan solusi jitu bagi permasalahan-permasalahan yang ada khususnya terkait konstruksi bangunan, baik itu skala perumahan maupun bangunan besar. <br> <br>
                         Sulitnya mencari tukang yang dapat dipercaya dan bekerja sesuai dengan tanggung jawabnya menjadi latar belakang permasalahan yang perlu dicarikan solusinya. Untuk menjawab itu semua, maka kami Dinas Cipta Karya dan Tata Ruang Pemerintah Kota Batam yang berlokasi di sekupang Kota Batam ini menghadirkan SIJAKON tentunya untuk mengatasi persoalan-persoalan yang ada.
                         "
                     </p>
                 </div>
-                <div class="col-lg-6 pt-4" style="min-height: 500px;">
+                <div class="col-lg-6 pt-4" style="min-height: 600px;">
                     <div class="position-relative h-100 wow fadeInUp" data-wow-delay="0.5s">
-                        <img class="position-absolute img-fluid" style="width: 100%; height: 500px" src="https://sijakon.batam.go.id/admin/api/kadis/9/photo" alt="">
+                        <img class="position-absolute img-fluid" style="width: 100%; height: 600px" src="https://sijakon.batam.go.id/admin/api/kadis/9/photo" alt="">
                     </div>
                 </div>
             </div>
