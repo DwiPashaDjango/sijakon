@@ -18,6 +18,7 @@ use App\Http\Controllers\Pages\InfoProyekController;
 use App\Http\Controllers\Pages\TentangKamiController;
 use App\Http\Controllers\Pages\UserGuideController;
 use App\Http\Controllers\ProyekController;
+use App\Http\Controllers\SliderController;
 use App\Http\Controllers\SumberDataController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Artisan;
@@ -82,6 +83,10 @@ Route::group([
 
         Route::prefix('sumber_data')->group(function () {
             Route::get('/', [SumberDataController::class, 'index'])->name('admin.sumber-data');
+        });
+
+        Route::prefix('sliders')->group(function () {
+            Route::get('/', [SliderController::class, 'index'])->name('admin.slider');
         });
     });
 

@@ -9,8 +9,8 @@ use App\Http\Controllers\Api\DashboardController;
 use App\Http\Controllers\Api\EquipmentController;
 use App\Http\Controllers\Api\MaterialController;
 use App\Http\Controllers\Api\ProyekController;
-use App\Http\Controllers\Api\RoleController;
 use App\Http\Controllers\Api\SatuanController;
+use App\Http\Controllers\Api\SliderController;
 use App\Http\Controllers\Api\SumberDataController;
 use App\Http\Controllers\Api\SumberProyekController;
 use App\Http\Controllers\Api\UserController;
@@ -144,6 +144,16 @@ Route::group([
         Route::get("/{id}/show", [ProyekController::class, "show"]);
         Route::put("/{id}/update", [ProyekController::class, "update"]);
         Route::delete("/{id}/destroy", [ProyekController::class, "destroy"]);
+    });
+
+    Route::group([
+        "prefix" => "sliders",
+    ], function () {
+        Route::get("/", [SliderController::class, "index"]);
+        Route::post("/store", [SliderController::class, "store"]);
+        Route::get("/{id}/show", [SliderController::class, "show"]);
+        Route::put("/{id}/update", [SliderController::class, "update"]);
+        Route::delete("/{id}/destroy", [SliderController::class, "destroy"]);
     });
 });
 

@@ -244,7 +244,6 @@
                                     <!-- item-->
                                     <h6 class="dropdown-header">Selamat datang ${ data.name }!</h6>
                                     <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="javascript:;" data-bs-toggle="modal" data-bs-target="#profile" data-bs-title="Pengaturan Profil" data-bs-id="" data-bs-action="update"><i class="mdi mdi-cog-outline text-muted fs-16 align-middle me-1"></i> <span class="align-middle">Pengaturan Profil</span></a>
                                     <a class="dropdown-item" id="logout" href="javascript:;"><i class="mdi mdi-logout text-muted fs-16 align-middle me-1"></i> <span class="align-middle" data-key="t-logout">Logout</span></a>
                                 </div>
                             `)
@@ -343,3 +342,5 @@
     @yield('javascript')
 </body>
 </html>
+
+{{-- <a class="dropdown-item" href="javascript:;" data-bs-toggle="modal" data-bs-target="#profile" data-bs-title="Pengaturan Profil" data-bs-id="" data-bs-action="update"><i class="mdi mdi-cog-outline text-muted fs-16 align-middle me-1"></i> <span class="align-middle">Pengaturan Profil</span></a> --}}

@@ -11,12 +11,11 @@
     <!-- Carousel Start -->
     <div class="container-fluid p-0">
         <div class="owl-carousel header-carousel">
-            <div class="owl-carousel-item position-relative">
-                <img class="img-fluid" src="https://sijakon.batam.go.id/admin/api/banner/14/photo" alt="" style="height: 500px;">
-            </div>
-            <div class="owl-carousel-item position-relative">
-                <img class="img-fluid" src="https://sijakon.batam.go.id/admin/api/banner/19/photo" alt="" style="height: 500px;">
-            </div>
+            @foreach ($slider as $item)
+                <div class="owl-carousel-item position-relative">
+                    <img class="img-fluid" src="{{asset($item->image)}}" alt="" style="height: 500px;">
+                </div>
+            @endforeach
         </div>
     </div>
     <!-- Carousel End -->

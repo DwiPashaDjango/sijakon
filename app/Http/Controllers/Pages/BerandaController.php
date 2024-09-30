@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\BadanUsaha;
 use App\Models\District;
 use App\Models\Proyek;
+use App\Models\Slider;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -23,6 +24,8 @@ class BerandaController extends Controller
         $countBadanUsaha = BadanUsaha::count();
         $countProyek = Proyek::count();
 
-        return view("pages.home", compact('districts', 'countTukang', 'countBadanUsaha', 'countProyek'));
+        $slider = Slider::all();
+
+        return view("pages.home", compact('districts', 'countTukang', 'countBadanUsaha', 'countProyek', 'slider'));
     }
 }

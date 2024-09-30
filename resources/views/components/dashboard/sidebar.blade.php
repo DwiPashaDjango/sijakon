@@ -70,6 +70,12 @@
                                     <span data-key="t-users">Sumber Data</span>
                                 </a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link {{ Request::routeIs('admin.slider') ? 'active' : '' }}" href="{{ route('admin.slider') }}">
+                                    <i class="mdi mdi-camera-image"></i>
+                                    <span data-key="t-users">Data Slider</span>
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </li>
